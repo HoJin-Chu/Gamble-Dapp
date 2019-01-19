@@ -10,7 +10,7 @@ export const store = new Vuex.Store({
  strict: true,
  state,
  mutations: {
-    registerWeb3Insctance (state,payload){
+    registerWeb3Instance (state,payload){
         console.log('registerWeb3Instance store mutations 발생',payload)
         let web3Copy = state.web3;
         
