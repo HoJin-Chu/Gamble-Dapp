@@ -4,7 +4,7 @@ import CasinoDapp from '@/components/CasinoDapp'
 
 Vue.use(Router)
 
-export default new Router({
+export const router = new Router({
     mode : 'history',
     routes : [
         {
