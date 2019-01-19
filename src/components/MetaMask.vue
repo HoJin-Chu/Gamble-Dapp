@@ -1,13 +1,12 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+    <div>
+        <p>Hello</p>
+    </div>
 </template>
 
 <script>
-
 export default {
-  name: 'app',
+    name: 'MetaMask'
 }
 </script>
 
