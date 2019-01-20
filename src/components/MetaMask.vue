@@ -2,18 +2,18 @@
 
 <template lang="html">
   <div class='metamask-info'>
-    <p v-if="isInjected" id="has-metamask"><i aria-hidden="true" class="fa fa-check"></i> Metamask installed</p>
-    <p v-else id="no-metamask"><i aria-hidden="true" class="fa fa-times"></i> Metamask not found</p>
-    <p>Network: {{ network }}</p>
-    <p>Account: {{ coinbase }}</p>
-    <p>Balance: {{ balance }} Wei </p>
+    <p v-if="isInjected" id="has-metamask"><i aria-hidden="true" class="fa fa-check"></i> 메타마스크 지갑 연결</p>
+    <p v-else id="no-metamask"><i aria-hidden="true" class="fa fa-times"></i> 메타마스크를 찾을수가 없습니다</p>
+    <p>네트워크환경: {{ network }}</p>
+    <p>계정: {{ coinbase }}</p>
+    <p>금액: {{ balance }} Wei </p>
   </div>
 </template>
 
 <script>
   import {NETWORKS} from '../util/constants/networks'
   import {mapState} from 'vuex'
-  
+
   export default {
     name: 'hello-metamask',
     computed: mapState({
@@ -31,4 +31,9 @@
 }
 #no-metamask {
   color:red;
-}</style>
+}
+.metamask-info{
+  text-align: center;
+  margin-top: 20%;
+}
+</style>

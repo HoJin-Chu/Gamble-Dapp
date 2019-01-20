@@ -1,8 +1,8 @@
 <template>
  <div class="casino">
-   <h1>Welcome to the Casino</h1>
-   <h4>Please pick a number between 1 and 10</h4>
-   Amount to bet: <input v-model="amount" placeholder="0 Ether">
+   <h1>도박 DAPP</h1>
+   <h3>1에서 10까지의 숫자에 돈을 걸어보세요</h3>
+   배팅 금액 : <input v-model="amount" placeholder="0 Ether">
    <ul>
      <li v-on:click='clickNumber'>1</li>
      <li v-on:click='clickNumber'>2</li>
@@ -84,27 +84,27 @@ export default {
  width:150px;
 }
 ul {
- margin: 25px;
+
+ 
+ margin-top: 100px;
  list-style-type: none;
  display: grid;
  grid-template-columns: repeat(5, 1fr);
- grid-column-gap:25px;
- grid-row-gap:25px;
+ grid-column-gap:10%;
+ grid-row-gap:20%;
 }
 li{
- padding: 20px;
  margin-right: 5px;
  border-radius: 50%;
+ width: 80px;
  cursor: pointer;
- background-color:#fff;
- border: -2px solid #bf0d9b;
- color: #bf0d9b;
- box-shadow:3px 5px #bf0d9b;
+ font-size : 50px;
+ font-weight: 900;
+ background-color:rgb(169, 129, 221);
 }
 li:hover{
- background-color:#bf0d9b;
+ background-color:#ff95ea;
  color:white;
- box-shadow:0px 0px #bf0d9b;
 }
 li:active{
  opacity: 0.7;
