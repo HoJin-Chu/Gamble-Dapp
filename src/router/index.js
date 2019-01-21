@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import CasinoDapp from '@/components/CasinoDapp'
+import GamblingDapp from '@/components/GamblingDapp'
 
 Vue.use(Router)
 
@@ -9,8 +9,8 @@ export const router = new Router({
     routes : [
         {
             path:'/',
-            name:'CasinoDapp',
-            component : CasinoDapp
+            name:'GamblingDapp',
+            component : GamblingDapp
         }
     ]
 })

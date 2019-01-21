@@ -1,5 +1,5 @@
 <template>
- <div class="casino">
+ <div class="Gambling">
    <h1>도박 DAPP</h1>
    <h3>1에서 10까지의 숫자에 돈을 걸어보세요</h3>
    배팅 금액 : <input v-model="amount" placeholder="0 Ether">
@@ -30,7 +30,7 @@
 
 <script>
 export default {
-    name: 'casino',
+    name: 'Gambling',
     mounted () {
     console.log('dispatching getContractInstance')
     this.$store.dispatch('getContractInstance')
@@ -76,7 +76,7 @@ export default {
 </script>
 
 <style scoped>
-.casino {
+.Gambling {
  margin-top: 50px;
  text-align:center;
 }

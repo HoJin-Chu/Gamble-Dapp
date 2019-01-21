@@ -1,19 +1,19 @@
 <template>
     <div>
-        <casino/>
+        <Gambling/>
         <MetaMask></MetaMask>
     </div>
 </template>
 
 <script>
 import MetaMask from './MetaMask'
-import casino from './CasinoComponent'
+import Gambling from './GamblingComponent'
 
 export default {
     name: 'CasinoDapp',
     components:{
         MetaMask,
-        casino
+        Gambling
     },
     // web3 요소를 컴포넌트가 생성되기 이전에 실행할수 있도록 beforeCreate사용 
     beforeCreate(){

@@ -9,20 +9,16 @@ import getContract from '../util/getContract'
 Vue.use(Vuex);
     
 export const store = new Vuex.Store({
- strict: true,
+ strict: true, // 엄격모드
  state,
  mutations: {
     registerWeb3Instance (state,payload){
         console.log('registerWeb3Instance store mutations 발생',payload)
-        let web3Copy = state.web3;
-        
-        web3Copy.coinbase = payload.coinbase;
-        web3Copy.networkId = payload.networkId;
-        web3Copy.balance = parseInt(payload.balance, 10);
-        web3Copy.isInjected = payload.injectedWeb3;
-        web3Copy.web3Instance = payload.web3;
-        state.web3 = web3Copy;
-
+        state.web3.coinbase = payload.coinbase;
+        state.web3.networkId = payload.networkId;
+        state.web3.balance = parseInt(payload.balance, 10);
+        state.web3.isInjected = payload.injectedWeb3;
+        state.web3.web3Instance = payload.web3;
         pollWeb3();
     },
     pollWeb3Instance(state, payload) {
